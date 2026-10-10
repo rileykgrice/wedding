@@ -66,21 +66,19 @@ const RSVPForm = () => {
             className="max-w-xl mx-auto text-center"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
+                rotate: [0, 5, -5, 0],
               }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity, 
-                ease: "easeInOut"
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
             >
               <Heart className="w-12 h-12 mx-auto mb-6 text-rose" />
             </motion.div>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">
-              Thank You
-            </h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">Thank You</h2>
             <p className="text-muted-foreground leading-relaxed">
               Your response has been received. We are so grateful you'll be part
               of our special day. We can't wait to celebrate with you.
@@ -110,7 +108,7 @@ const RSVPForm = () => {
           </h2>
           <div className="divider-editorial mt-8" />
           <p className="text-muted-foreground mt-8 max-w-md mx-auto">
-            Please respond by August 1st, 2026
+            Please respond by Janurary 11th, 2028
           </p>
         </motion.div>
 
@@ -133,7 +131,7 @@ const RSVPForm = () => {
               <div className="absolute inset-0 border border-rose/30 m-6 pointer-events-none" />
             </div>
             {/* Floating quote */}
-            <motion.div 
+            <motion.div
               className="absolute -bottom-8 -right-8 bg-background p-6 shadow-xl max-w-[250px]"
               initial={{ opacity: 0, y: 20 }}
               animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
@@ -142,7 +140,9 @@ const RSVPForm = () => {
               <p className="font-serif text-lg italic text-muted-foreground">
                 "Can't wait to celebrate with you!"
               </p>
-              <p className="text-sm tracking-wider uppercase mt-2 text-rose">— O & S</p>
+              <p className="text-sm tracking-wider uppercase mt-2 text-rose">
+                — B & R
+              </p>
             </motion.div>
           </motion.div>
 
@@ -153,7 +153,10 @@ const RSVPForm = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
+              >
                 {/* Name */}
                 <FormField
                   control={form.control}

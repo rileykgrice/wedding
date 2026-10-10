@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Clock, Sparkles } from "lucide-react";
+import { MapPin, Sparkles } from "lucide-react";
 import theRoseGardenImage from "@/assets/therosegarden.jpg";
 
 const events = [
   {
     title: "The Ceremony",
     time: "4:00 PM",
-    location: "The Rose Garden",
-    venue: "The Whitmore Estate",
-    address: "2847 Silverado Trail, Napa Valley, CA 94558",
+    location: "TBC",
+    venue: "Anam Cara Gardens",
+    address: "150 Rangiuru Road, Ōtaki Beach 5512, New Zealand",
     description:
       "Join us as we exchange vows in the estate's enchanting rose garden, surrounded by cascading blooms and the golden California light.",
     image: theRoseGardenImage,
@@ -18,20 +18,22 @@ const events = [
   {
     title: "Cocktail Hour",
     time: "5:00 PM",
-    location: "The Terrace",
-    venue: "The Whitmore Estate",
+    location: "TBC",
+    venue: "Anam Cara Gardens",
     description:
       "Sip craft cocktails and enjoy hors d'oeuvres on the terrace overlooking the vineyard as the sun begins its descent.",
-    image: "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=800&q=80",
   },
   {
     title: "Reception & Dinner",
     time: "6:30 PM",
-    location: "The Grand Ballroom",
-    venue: "The Whitmore Estate",
+    location: "TBC",
+    venue: "Anam Cara Gardens",
     description:
       "An evening of fine dining, heartfelt toasts, and dancing beneath crystal chandeliers. Dinner will be served family-style.",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
   },
 ];
 
@@ -63,13 +65,17 @@ const EventCard = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         {/* Time badge */}
         <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2">
-          <span className="font-serif text-lg text-foreground">{event.time}</span>
+          <span className="font-serif text-lg text-foreground">
+            {event.time}
+          </span>
         </div>
       </div>
 
       <div className="bg-background/50 border border-border/50 border-t-0 p-8 md:p-10 transition-all duration-500 hover:border-rose/30 hover:shadow-lg hover:shadow-rose/5">
         {/* Event Title */}
-        <h3 className="font-serif text-2xl md:text-3xl mb-6 transition-colors duration-300 group-hover:text-rose/80">{event.title}</h3>
+        <h3 className="font-serif text-2xl md:text-3xl mb-6 transition-colors duration-300 group-hover:text-rose/80">
+          {event.title}
+        </h3>
 
         {/* Location */}
         <div className="space-y-3 mb-6">
@@ -146,7 +152,7 @@ const EventDetails = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16 md:mt-24"
         >
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent/30 border border-border/50 hover:bg-accent/50 hover:border-rose/20 transition-all duration-500"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -158,7 +164,7 @@ const EventDetails = () => {
               <Sparkles className="w-4 h-4 text-rose" />
             </motion.div>
             <span className="text-sm tracking-[0.2em] uppercase">
-              Attire: Black Tie Optional
+              Attire: Cocktail
             </span>
             <motion.div
               animate={{ rotate: [0, -10, 10, 0] }}

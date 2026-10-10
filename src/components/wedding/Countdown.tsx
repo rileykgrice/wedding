@@ -6,9 +6,9 @@ import { Heart } from "lucide-react";
 const Countdown = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  
-  const weddingDate = new Date("2026-09-14T16:00:00");
-  
+
+  const weddingDate = new Date("2028-03-11T15:00:00+13:00");
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -72,9 +72,7 @@ const Countdown = () => {
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="inline-block"
-          >
-            <Heart className="w-6 h-6 text-rose mx-auto mb-8" fill="currentColor" />
-          </motion.div>
+          ></motion.div>
         </motion.div>
 
         {/* Countdown Blocks */}
@@ -92,7 +90,7 @@ const Countdown = () => {
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-6 md:px-10 md:py-8 min-w-[80px] md:min-w-[120px]"
             >
-              <motion.span 
+              <motion.span
                 className="block font-serif text-4xl md:text-6xl text-white mb-2"
                 key={block.value}
                 initial={{ opacity: 0, y: -10 }}
@@ -115,7 +113,7 @@ const Countdown = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="font-serif text-xl md:text-2xl italic text-white/80 mt-12"
         >
-          September 14, 2026 • Napa Valley
+          March 11, 2028 • Ōtaki
         </motion.p>
       </div>
     </section>

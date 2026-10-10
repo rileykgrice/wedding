@@ -14,10 +14,10 @@ const footerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 15 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -34,42 +34,42 @@ const Footer = () => {
           className="text-center"
         >
           <div className="inline-flex items-center gap-4 mb-8">
-            <span className="font-serif text-4xl md:text-5xl">O</span>
+            <span className="font-serif text-4xl md:text-5xl">B</span>
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.15, 1],
               }}
-              transition={{ 
-                duration: 1.5, 
-                repeat: Infinity, 
-                ease: "easeInOut"
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
             >
               <Heart className="w-5 h-5 text-rose" />
             </motion.div>
-            <span className="font-serif text-4xl md:text-5xl">S</span>
+            <span className="font-serif text-4xl md:text-5xl">R</span>
           </div>
 
-          <motion.p 
+          <motion.p
             className="font-serif text-xl md:text-2xl italic mb-2"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            September 14, 2026
+            March 11, 2028
           </motion.p>
-          <motion.p 
+          <motion.p
             className="text-sm tracking-[0.2em] uppercase text-background/60"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Napa Valley, California
+            Ōtaki, New Zealand
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="w-16 h-px bg-background/20 mx-auto my-8"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -77,14 +77,14 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           />
 
-          <motion.p 
+          <motion.p
             className="text-sm text-background/50"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Made with love for our forever
+            See you there
           </motion.p>
         </motion.div>
       </div>

@@ -40,7 +40,7 @@ const Navigation = () => {
               isScrolled ? "text-foreground" : "text-white"
             }`}
           >
-            O & S
+            B & R
           </a>
 
           {/* Desktop Navigation */}
@@ -50,8 +50,8 @@ const Navigation = () => {
                 <a
                   href={link.href}
                   className={`text-sm tracking-[0.15em] uppercase transition-colors link-underline ${
-                    isScrolled 
-                      ? "text-muted-foreground hover:text-foreground" 
+                    isScrolled
+                      ? "text-muted-foreground hover:text-foreground"
                       : "text-white/80 hover:text-white"
                   }`}
                 >
